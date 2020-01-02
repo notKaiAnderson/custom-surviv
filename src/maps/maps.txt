@@ -1,0 +1,100 @@
+/////Cobalt Map
+
+
+var xx = webpackJsonp([],null,["d5ec3c16"]);
+xx.biome.colors.beach= 0x443D3A ;
+xx.biome.colors.grass= 0x4D5A68 ;
+xx.biome.colors.underground= 0x1B0D03 ;
+xx.biome.colors.riverbank= 0x653313 ;
+xx.biome.colors.water= 0x003571 ;
+xx.biome.colors.background= 0x020E18 ;
+
+
+
+//// Normal Map
+var xx = webpackJsonp([],null,["d5ec3c16"]);
+xx.biome.colors.beach= 0xcdb35b ;
+xx.biome.colors.grass= 0x80af49 ;
+xx.biome.colors.underground= 0x1b0d03 ;
+xx.biome.colors.water= 0x3282ab ;
+xx.biome.colors.riverbank= 0x905e24 ;
+
+
+
+
+///// Desert Map
+
+
+var xx = webpackJsonp([],null,["d5ec3c16"]);
+xx.biome.colors.beach= 0xc9843a ;
+xx.biome.colors.grass= 0xdfa757 ;
+xx.biome.colors.underground= 0x3d0d03 ;
+xx.biome.colors.riverbank= 0xb25e24 ;
+xx.biome.colors.water= 0x8a9b4e ;
+
+
+
+
+///// Halloween Map
+
+
+var xx = webpackJsonp([],null,["d5ec3c16"]);
+xx.biome.colors.beach= 0x64410e ;
+xx.biome.colors.grass= 0x212404 ;
+xx.biome.colors.underground= 0x120801 ;
+xx.biome.colors.water= 0x280000 ;
+xx.biome.colors.riverbank= 0x3c1b05 ;
+
+
+
+
+///// Savannah Map
+var xx = webpackJsonp([],null,["d5ec3c16"]);
+xx.biome.colors.beach= 0xCB7132 ;
+xx.biome.colors.grass= 0xB4B02E ;
+xx.biome.colors.underground= 0x3D0D03 ;
+xx.biome.colors.water= 0x41A4AA ;
+xx.biome.colors.riverbank= 0x653313 ;
+xx.biome.colors.background= 0x1C5B5F ;
+
+
+////// 50v50 Map
+var xx = webpackJsonp([],null,["d5ec3c16"]);
+xx.biome.colors.beach= 0x8e5632 ;
+xx.biome.colors.grass= 0x4e6128 ;
+xx.biome.colors.underground= 0x1b0d03 ;
+xx.biome.colors.water= 0x071B36 ;
+xx.biome.colors.riverbank= 0x653313 ;
+
+
+
+///// Spring Map
+var xx = webpackJsonp([],null,["d5ec3c16"]);
+xx.biome.colors.beach= 0xefb35b ;
+xx.biome.colors.grass= 0x8e832a ;
+xx.biome.colors.underground= 0x1b0d03 ;
+xx.biome.colors.water= 0x3282ab ;
+xx.biome.colors.riverbank= 0x77360b ;
+
+
+
+
+
+////// Winter Map
+var xx = webpackJsonp([],null,["d5ec3c16"]);
+xx.biome.colors.beach= 0xcdb35b ;
+xx.biome.colors.grass= 0xbdbdbd ;
+xx.biome.colors.underground= 0x1b0d03 ;
+xx.biome.colors.water= 0x0c4d51 ;
+xx.biome.colors.riverbank= 0x905e24 ;
+
+
+
+
+/////// Woods Map
+var xx = webpackJsonp([],null,["d5ec3c16"]);
+xx.biome.colors.beach= 0xf4ae48 ;
+xx.biome.colors.grass= 0x5c910a ;
+xx.biome.colors.underground= 0x1b0d03 ;
+xx.biome.colors.water= 0x3282ab ;
+xx.biome.colors.riverbank= 0x8a8a8a ;
