@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Free Custom Surviv.io Skins and Mods (NEW)
 // @namespace    https://github.com/notKaiAnderson/
-// @version      0.9.8
+// @version      0.9.9
 // @description   a free and purely cosmetic script that lets you use custom skins during games, it even lets you make your own skins!
 // @author       someGays
 // @match        *://surviv.io/*
