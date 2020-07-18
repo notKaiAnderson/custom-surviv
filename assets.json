@@ -239,5 +239,171 @@
       },
       "lootImg": { "sprite": "loot-shirt-outfitHeaven.img" }
     }
-  ]
+  ],
+  "customTrees": [
+  {
+    "name": "tree_01",
+    "sprite": "map-tree-03.img"
+  },
+  {
+    "name": "tree_01cb",
+    "sprite": "map-tree-03cb.img"
+  },
+  {
+    "name": "tree_01sv",
+    "sprite": "map-tree-03sv.img"
+  },
+  {
+    "name": "tree_interior_01",
+    "sprite": "map-tree-03.img"
+  },
+  {
+    "name": "tree_01x",
+    "sprite": "map-tree-01x.img"
+  },
+  {
+    "name": "tree_16",
+    "sprite": "map-tree-16.img"
+  },
+  {
+    "name": "tree_17",
+    "sprite": "map-tree-17.img"
+  },
+  {
+    "name": "tree_18",
+    "sprite": "map-tree-18.img"
+  },
+  {
+    "name": "tree_19",
+    "sprite": "map-tree-19.img"
+  },
+  {
+    "name": "tree_02",
+    "sprite": "map-tree-04.img"
+  },
+  {
+    "name": "tree_02h",
+    "sprite": "map-tree-04h.img"
+  },
+  {
+    "name": "tree_03",
+    "sprite": "map-tree-03.img"
+  },
+  {
+    "name": "tree_03sv",
+    "sprite": "map-tree-03sv.img"
+  },
+  {
+    "name": "tree_05",
+    "sprite": "map-tree-05.img"
+  },
+  {
+    "name": "tree_05b",
+    "sprite": "map-tree-05.img"
+  },
+  {
+    "name": "tree_05c",
+    "sprite": "map-tree-05c.img"
+  },
+  {
+    "name": "tree_06",
+    "sprite": "map-tree-06.img"
+  },
+  {
+    "name": "tree_07",
+    "sprite": "map-tree-07.img"
+  },
+  {
+    "name": "tree_07sp",
+    "sprite": "map-tree-07sp.img"
+  },
+  {
+    "name": "tree_07spr",
+    "sprite": "map-tree-07sp.img"
+  },
+  {
+    "name": "tree_07su",
+    "sprite": "map-tree-07su.img"
+  },
+  {
+    "name": "tree_08",
+    "sprite": "map-tree-08.img"
+  },
+  {
+    "name": "tree_08b",
+    "sprite": "map-tree-08.img"
+  },
+  {
+    "name": "tree_08c",
+    "sprite": "map-tree-08.img"
+  },
+  {
+    "name": "tree_08f",
+    "sprite": "map-tree-08f.img"
+  },
+  {
+    "name": "tree_08sp",
+    "sprite": "map-tree-08sp.img"
+  },
+  {
+    "name": "tree_08spb",
+    "sprite": "map-tree-08sp.img"
+  },
+  {
+    "name": "tree_08spc",
+    "sprite": "map-tree-08sp.img"
+  },
+  {
+    "name": "tree_08spr",
+    "sprite": "map-tree-08sp.img"
+  },
+  {
+    "name": "tree_08su",
+    "sprite": "map-tree-08su.img"
+  },
+  {
+    "name": "tree_08sub",
+    "sprite": "map-tree-08su.img"
+  },
+  {
+    "name": "tree_09",
+    "sprite": "map-tree-09.img"
+  },
+  {
+    "name": "tree_10",
+    "sprite": "map-tree-10.img"
+  },
+  {
+    "name": "tree_11",
+    "sprite": "map-tree-11.img"
+  },
+  {
+    "name": "tree_12",
+    "sprite": "map-tree-12.img"
+  },
+  {
+    "name": "tree_13",
+    "sprite": "map-tree-13.img"
+  },
+  {
+    "name": "tree_14",
+    "sprite": "map-tree-13.img"
+  },
+  {
+    "name": "tree_15",
+    "sprite": "map-tree-14.img"
+  },
+  {
+    "name": "tree_switch_01",
+    "sprite": "map-tree-switch-01.img"
+  },
+  {
+    "name": "tree_switch_02",
+    "sprite": "map-tree-switch-02.img"
+  },
+  {
+    "name": "tree_switch_03",
+    "sprite": "map-tree-switch-03.img"
+  }
+]
 }
