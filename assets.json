@@ -386,68 +386,8 @@
       "sprite": "map-crate-02x.img"
     },
     {
-      "name": "crate_02a",
-      "sprite": "map-crate-02a.img"
-    },
-    {
-      "name": "crate_02f",
-      "sprite": "map-crate-02f.img"
-    },
-    {
-      "name": "crate_02d",
-      "sprite": "map-crate-02f.img"
-    },
-    {
-      "name": "crate_03",
-      "sprite": "map-crate-03.img"
-    },
-    {
-      "name": "crate_03x",
-      "sprite": "map-crate-03x.img"
-    },
-    {
       "name": "crate_05",
       "sprite": "map-crate-05.img"
-    },
-    {
-      "name": "crate_06",
-      "sprite": "map-crate-06.img"
-    },
-    {
-      "name": "crate_07",
-      "sprite": "map-crate-07.img"
-    },
-    {
-      "name": "crate_07b",
-      "sprite": "map-crate-07.img"
-    },
-    {
-      "name": "crate_07sv",
-      "sprite": "map-crate-07.img"
-    },
-    {
-      "name": "crate_08",
-      "sprite": "map-crate-08.img"
-    },
-    {
-      "name": "crate_09",
-      "sprite": "map-crate-09.img"
-    },
-    {
-      "name": "crate_10",
-      "sprite": "map-crate-10.img"
-    },
-    {
-      "name": "crate_10sv",
-      "sprite": "map-crate-10.img"
-    },
-    {
-      "name": "crate_11sv",
-      "sprite": "map-crate-11.img"
-    },
-    {
-      "name": "crate_11de",
-      "sprite": "map-crate-11.img"
     },
     {
       "name": "crate_11tr",
