@@ -1,6 +1,10 @@
 {
   "customFists": [
-    { "name": "normal", "spriteImg": "", "lootImg": "loot-weapon-fists.img" },
+    {
+      "name": "normal",
+      "spriteImg": "",
+      "lootImg": "loot-weapon-fists.img"
+    },
     {
       "name": "immolate",
       "spriteImg": "player-hands-immolate.img",
@@ -36,8 +40,12 @@
         "footTint": 13644309,
         "backpackTint": 13644309
       },
-      "lootImg": { "sprite": "loot-shirt-outfitFireball.img" },
-      "accessory": { "sprite": "player-accessory-outfitFireball.img" }
+      "lootImg": {
+        "sprite": "loot-shirt-outfitFireball.img"
+      },
+      "accessory": {
+        "sprite": "player-accessory-outfitFireball.img"
+      }
     },
     {
       "name": "Mecha",
@@ -47,8 +55,12 @@
         "footTint": 5996250,
         "backpackTint": 5996250
       },
-      "lootImg": { "sprite": "loot-shirt-outfitMecha.img" },
-      "accessory": { "sprite": "player-accessory-outfitMecha.img" }
+      "lootImg": {
+        "sprite": "loot-shirt-outfitMecha.img"
+      },
+      "accessory": {
+        "sprite": "player-accessory-outfitMecha.img"
+      }
     },
     {
       "name": "Diamondy",
@@ -58,8 +70,12 @@
         "footTint": 16302391,
         "backpackTint": 16302391
       },
-      "lootImg": { "sprite": "loot-shirt-outfitDiamondy.img" },
-      "accessory": { "sprite": "player-accessory-outfitDiamondy.img" }
+      "lootImg": {
+        "sprite": "loot-shirt-outfitDiamondy.img"
+      },
+      "accessory": {
+        "sprite": "player-accessory-outfitDiamondy.img"
+      }
     },
     {
       "name": "Astronaut",
@@ -67,8 +83,12 @@
         "baseSprite": "player-base-outfitAstronaut.img",
         "backpackTint": 16750080
       },
-      "lootImg": { "sprite": "loot-shirt-outfitAstronaut.img" },
-      "accessory": { "sprite": "player-accessory-outfitAstronaut.img" }
+      "lootImg": {
+        "sprite": "loot-shirt-outfitAstronaut.img"
+      },
+      "accessory": {
+        "sprite": "player-accessory-outfitAstronaut.img"
+      }
     },
     {
       "name": "Mojo",
@@ -78,7 +98,9 @@
         "footTint": 15124237,
         "backpackTint": 0
       },
-      "lootImg": { "sprite": "loot-shirt-outfitMojo.img" }
+      "lootImg": {
+        "sprite": "loot-shirt-outfitMojo.img"
+      }
     },
     {
       "name": "Giraffe",
@@ -89,7 +111,9 @@
         "backpackTint": 15840836,
         "backpackSprite": "player-circle-base-02.img"
       },
-      "lootImg": { "sprite": "loot-shirt-outfitGiraffe.img" }
+      "lootImg": {
+        "sprite": "loot-shirt-outfitGiraffe.img"
+      }
     },
     {
       "name": "Urban Camo",
@@ -99,7 +123,9 @@
         "footTint": 2834524,
         "backpackTint": 10859210
       },
-      "lootImg": { "sprite": "loot-shirt-outfitUrbanCamo.img" }
+      "lootImg": {
+        "sprite": "loot-shirt-outfitUrbanCamo.img"
+      }
     },
     {
       "name": "Fowl Facade",
@@ -110,7 +136,10 @@
         "footTint": 10818304,
         "backpackTint": 11031846
       },
-      "lootImg": { "sprite": "loot-shirt-outfitTurkey.img", "tint": 15781563 }
+      "lootImg": {
+        "sprite": "loot-shirt-outfitTurkey.img",
+        "tint": 15781563
+      }
     },
     {
       "name": "Geometric",
@@ -120,7 +149,9 @@
         "footTint": 544848,
         "backpackTint": 544848
       },
-      "lootImg": { "sprite": "loot-shirt-outfitGeometric.img" }
+      "lootImg": {
+        "sprite": "loot-shirt-outfitGeometric.img"
+      }
     },
     {
       "name": "Military",
@@ -130,7 +161,9 @@
         "footTint": 4873026,
         "backpackTint": 4873026
       },
-      "lootImg": { "sprite": "loot-shirt-outfitMilitary.img" }
+      "lootImg": {
+        "sprite": "loot-shirt-outfitMilitary.img"
+      }
     },
     {
       "name": "Developer Swag",
@@ -141,7 +174,9 @@
         "footTint": 6937122,
         "backpackTint": 2902793
       },
-      "lootImg": { "sprite": "loot-shirt-outfitDev.img" }
+      "lootImg": {
+        "sprite": "loot-shirt-outfitDev.img"
+      }
     },
     {
       "name": "Red Leader",
@@ -151,7 +186,10 @@
         "footTint": 16711680,
         "backpackTint": 5442572
       },
-      "lootImg": { "sprite": "loot-shirt-01.img", "tint": 10098712 }
+      "lootImg": {
+        "sprite": "loot-shirt-01.img",
+        "tint": 10098712
+      }
     },
     {
       "name": "Siberian Assault",
@@ -164,7 +202,9 @@
         "backpackTint": 13816530,
         "backpackSprite": "player-circle-base-01.img"
       },
-      "lootImg": { "sprite": "loot-shirt-outfitSpetsnaz.img" }
+      "lootImg": {
+        "sprite": "loot-shirt-outfitSpetsnaz.img"
+      }
     },
     {
       "name": "Woodcutter's Wrap",
@@ -174,7 +214,9 @@
         "footTint": 8258312,
         "backpackTint": 4854547
       },
-      "lootImg": { "sprite": "loot-shirt-outfitLumber.img" }
+      "lootImg": {
+        "sprite": "loot-shirt-outfitLumber.img"
+      }
     },
     {
       "name": "Sunset",
@@ -187,7 +229,9 @@
         "backpackTint": 6458057,
         "backpackSprite": "player-circle-base-01.img"
       },
-      "lootImg": { "sprite": "loot-shirt-outfitSunset.img" }
+      "lootImg": {
+        "sprite": "loot-shirt-outfitSunset.img"
+      }
     },
     {
       "name": "Splotchfest",
@@ -200,7 +244,9 @@
         "backpackTint": 6530876,
         "backpackSprite": "player-circle-base-01.img"
       },
-      "lootImg": { "sprite": "loot-shirt-outfitSplotchfest.img" }
+      "lootImg": {
+        "sprite": "loot-shirt-outfitSplotchfest.img"
+      }
     },
     {
       "name": "Clay More",
@@ -214,7 +260,9 @@
         "backpackTint": 15632257,
         "backpackSprite": "player-circle-base-01.img"
       },
-      "lootImg": { "sprite": "loot-shirt-outfitClayMore.img" }
+      "lootImg": {
+        "sprite": "loot-shirt-outfitClayMore.img"
+      }
     },
     {
       "name": "Chromesis",
@@ -226,8 +274,12 @@
         "backpackTint": 9803157,
         "backpackSprite": "player-circle-base-01.img"
       },
-      "lootImg": { "sprite": "loot-shirt-outfitChromesis.img" },
-      "accessory": { "sprite": "outfit-chrome-accessory.img" }
+      "lootImg": {
+        "sprite": "loot-shirt-outfitChromesis.img"
+      },
+      "accessory": {
+        "sprite": "outfit-chrome-accessory.img"
+      }
     },
     {
       "name": "Celestial Garb",
@@ -237,7 +289,9 @@
         "footTint": 13762639,
         "handTint": 13762639
       },
-      "lootImg": { "sprite": "loot-shirt-outfitHeaven.img" }
+      "lootImg": {
+        "sprite": "loot-shirt-outfitHeaven.img"
+      }
     }
   ],
   "customTrees": [
