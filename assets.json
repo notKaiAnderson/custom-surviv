@@ -308,10 +308,6 @@
       "sprite": "map-tree-03sv.img"
     },
     {
-      "name": "tree_interior_01",
-      "sprite": "map-tree-03.img"
-    },
-    {
       "name": "tree_16",
       "sprite": "map-tree-16.img"
     },
