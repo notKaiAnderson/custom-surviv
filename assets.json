@@ -382,14 +382,6 @@
       "sprite": "map-crate-02.img"
     },
     {
-      "name": "crate_02sv",
-      "sprite": "map-crate-02sv.img"
-    },
-    {
-      "name": "crate_02sv_lake",
-      "sprite": "map-crate-02sv.img"
-    },
-    {
       "name": "crate_02x",
       "sprite": "map-crate-02x.img"
     },
@@ -412,10 +404,6 @@
     {
       "name": "crate_03x",
       "sprite": "map-crate-03x.img"
-    },
-    {
-      "name": "crate_04",
-      "sprite": "map-crate-04.img"
     },
     {
       "name": "crate_05",
@@ -450,14 +438,6 @@
       "sprite": "map-crate-10.img"
     },
     {
-      "name": "crate_11",
-      "sprite": "map-crate-11.img"
-    },
-    {
-      "name": "crate_11h",
-      "sprite": "map-crate-11h.img"
-    },
-    {
       "name": "crate_10sv",
       "sprite": "map-crate-10.img"
     },
@@ -474,27 +454,7 @@
       "sprite": "map-crate-11.img"
     },
     {
-      "name": "crate_12",
-      "sprite": "map-crate-12.img"
-    },
-    {
-      "name": "crate_13",
-      "sprite": "map-crate-13.img"
-    },
-    {
-      "name": "crate_14",
-      "sprite": "map-crate-14.img"
-    },
-    {
-      "name": "crate_14a",
-      "sprite": "map-crate-14a.img"
-    },
-    {
       "name": "crate_15",
-      "sprite": "map-crate-14.img"
-    },
-    {
-      "name": "crate_16",
       "sprite": "map-crate-14.img"
     },
     {
@@ -506,23 +466,7 @@
       "sprite": "map-crate-19.img"
     },
     {
-      "name": "crate_20",
-      "sprite": "map-crate-20.img"
-    },
-    {
-      "name": "crate_21",
-      "sprite": "map-crate-21.img"
-    },
-    {
-      "name": "crate_21b",
-      "sprite": "map-crate-21.img"
-    },
-    {
       "name": "crate_22",
-      "sprite": "map-crate-22.img"
-    },
-    {
-      "name": "crate_22d",
       "sprite": "map-crate-22.img"
     },
     {
@@ -530,32 +474,8 @@
       "sprite": "map-crate-frenemies.img"
     },
     {
-      "name": "crate_IceBox",
-      "sprite": "map-icebox-01.img"
-    },
-    {
       "name": "crate_egg",
       "sprite": "map-crate-egg.img"
-    },
-    {
-      "name": "crate_frenemies_metal",
-      "sprite": "map-metal-crate-frenemies.img"
-    },
-    {
-      "name": "crate_ship_metal",
-      "sprite": "metal-crate-ship-01.img"
-    },
-    {
-      "name": "crate_ship_metal_red",
-      "sprite": "metal-crate-ship-02.img"
-    },
-    {
-      "name": "crate_ship_metal_big",
-      "sprite": "crate-metal-ship-big.img"
-    },
-    {
-      "name": "crate_02b",
-      "sprite": "map-crate-02b.img"
     }
   ]
 }
