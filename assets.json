@@ -312,10 +312,6 @@
       "sprite": "map-tree-03.img"
     },
     {
-      "name": "tree_01x",
-      "sprite": "map-tree-01x.img"
-    },
-    {
       "name": "tree_16",
       "sprite": "map-tree-16.img"
     },
@@ -358,10 +354,6 @@
     {
       "name": "tree_10",
       "sprite": "map-tree-10.img"
-    },
-    {
-      "name": "tree_11",
-      "sprite": "map-tree-11.img"
     },
     {
       "name": "tree_15",
