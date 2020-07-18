@@ -27,7 +27,7 @@
       "lootImg": "loot-melee-blackholes.img"
     }
   ],
-  "skinsArr": [
+  "customSkins": [
     {
       "name": "Fireball",
       "skinImg": {
