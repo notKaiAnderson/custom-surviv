@@ -1,19 +1,24 @@
 # custom-surviv-skins
 
-![alt text](https://raw.githubusercontent.com/notKaiAnderson/custom-surviv-skins/master/image.png)
+report bugs and request features and skins on my discord https://discord.gg/WjXgrGa
 
-### Installation instruction 
+![image01](https://i.imgur.com/D80YNea.png)
+![image02](https://i.imgur.com/Da6rtLt.png)
+![image03](https://i.imgur.com/mypSYKG.png)
 
-  1. Install "Tampermonkey" extension for Chrome Browser
-  2. Install the script from [here](https://greasyfork.org/en/scripts/394362-custom-surviv-skins)
-  3. Select basic outfit from loadout
+## Installation instruction
+
+1. Install "Tampermonkey" extension for Chrome Browser
+2. Install the script
+3. Select basic outfit from the loadout
 
 ### Note:
-* 3rd party extensions (or code changes) is not official or supported by the developers of the game,
-* they take no responsibility for 3rd party and doesn't recommend it neither,
-* all usage of it is on own risk and extensions THAT GIVES YOU A ADVANTAGE is not allowed!
 
+- other player can't see the custom skin
+- contact me on discord for faster replies https://discord.gg/WjXgrGa
+- Refreshing should fix most of the errors, so try that before reporting
+- Report bugs and ill fix them when I have time) (include a screenshot)
+- you can also request features and I may add them
 
-### Disclaimer:
-* This script doesn't contain any hackusations, or code that gives you a unfair advantage.
-* Only you can see the custom skin 
+I'm working on custom gun skins  
+they will be out in the next update 🐓
