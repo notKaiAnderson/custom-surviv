@@ -29,6 +29,11 @@
       "name": "black holes",
       "spriteImg": "player-hands-blackholes.img",
       "lootImg": "loot-melee-blackholes.img"
+    },
+    {
+      "name": "frostpunch",
+      "spriteImg": "player-hands-FrostPunch.img",
+      "lootImg": "loot-melee-FrostPunch.img"
     }
   ],
   "customSkins": [
