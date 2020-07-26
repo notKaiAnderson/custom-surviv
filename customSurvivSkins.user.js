@@ -25,18 +25,7 @@
 // @run-at       document-end
 // ==/UserScript==
 
-// global declarartion
-const skinOutfit = webpackJsonp([], null, ["63d67e9d"]);
-const FISTS = webpackJsonp([], null, ["ccb6ad93"]);
-const obstacles = webpackJsonp([], null, ["03f4982a"]);
-
-window.__customSkins = [];
-window.__customFists = [];
-window.__customTrees = [];
-window.__customCrates = [];
-window.__customObstale = [];
-window.SkinRules = {};
-
+// turn string into camel case
 String.prototype.toCamelCase = function () {
   return this.replace(/\s(.)/g, function ($1) {
     return $1.toUpperCase();
@@ -46,23 +35,50 @@ String.prototype.toCamelCase = function () {
       return $1.toLowerCase();
     });
 };
+
 // make console.log() work
 console.log = console.info;
-//clear storage becuase it's no longer needed
+
+// i hosted the assets on github cuz the file was large and vs code kept crashing(
+// and to add or remove assets without having to update the script
+const ASSETS_URL = "https://notkaianderson.github.io/custom-surviv/assets.json";
+const CSS_URL = "https://notkaianderson.github.io/custom-surviv/styles.min.css";
+
+// Inject CSS
+let node = `<link rel="stylesheet" href="${CSS_URL}">`;
+document.head.innerHTML += node;
 
 fetch("https://notkaianderson.github.io/custom-surviv/assets.json")
   .then((data) => data.json())
   .then((response) => {
-    console.log(response);
-    __customFists = response.customFists;
-    __customSkins = response.customSkins;
-    __customTrees = response.customTrees;
-    __customCrates = response.customCrates;
-    __customObstale = [...__customTrees, ...__customCrates];
-    load();
+    load(response);
   });
-function load() {
+
+// load after fetching the assets
+function load(response) {
+  console.log(response);
+
+  // global declarartion
+  const skinOutfit = webpackJsonp([], null, ["63d67e9d"]);
+  const FISTS = webpackJsonp([], null, ["ccb6ad93"]);
+  const obstacles = webpackJsonp([], null, ["03f4982a"]);
+
+  let __customFists = response.customFists;
+  let __customSkins = response.customSkins;
+  let __customTrees = response.customTrees;
+  let __customCrates = response.customCrates;
+  // needed for guns border
+  let __guns = response.guns;
+  // let __customObstale = [...__customTrees, ...__customCrates];
+
+  // Rules
+  // no idea why garlic named them that
+  const SkinRules = {};
+  const ObstaclesRules = {};
+  const FistsRules = {};
+
   // UI stuff
+  // DO NOT REMOVE OLIMPIQISGAY COMMENTS FROM THE CODE)
   let ehtml = `
                 <div  class="custom-wrapper-random"> 
                     olimpiqisgay)
@@ -124,7 +140,8 @@ function load() {
 </div>
 `;
 
-  // Tabs
+  // UI Tabs
+  // Stolen from codepen
   const tabLinks = document.querySelectorAll(".tab");
   const tabContents = document.querySelectorAll(".content");
   tabLinks[0].classList.add("active-tab");
@@ -144,8 +161,8 @@ function load() {
   skinItems.addEventListener("click", applySkin); // apply skins and border on click
   skinItems.innerHTML = "";
   // generate Skins HTML
-  let skinHtml = ``;
-
+  let skinHtml = "";
+  // this also get called everytime someone create a new skin
   function updatehtml() {
     skinHtml = "";
     __customSkins.forEach((obj) => {
@@ -166,10 +183,13 @@ function load() {
     skinItems.innerHTML = skinHtml;
   }
   updatehtml();
+
+  // Classes
   class Skin {
     constructor(obj) {
       this.skin = obj;
 
+      //skingImg
       skinOutfit.outfitBase.skinImg.baseTint =
         this.skin.skinImg.baseTint || 16777215;
       skinOutfit.outfitBase.skinImg.baseSprite =
@@ -187,10 +207,12 @@ function load() {
       skinOutfit.outfitBase.skinImg.footSprite =
         this.skin.skinImg.footSprite || "player-feet-02.img";
 
+      // lootImg
       skinOutfit.outfitBase.lootImg.sprite =
         this.skin.lootImg.sprite || "loot-shirt-01.img";
       skinOutfit.outfitBase.lootImg.tint = this.skin.lootImg.tint || 16777215;
 
+      // accessory
       skinOutfit.outfitBase.accessory = {};
 
       if (!this.skin.accessory) {
@@ -200,6 +222,37 @@ function load() {
       skinOutfit.outfitBase.accessory.sprite = this.skin.accessory.sprite || "";
 
       // console.log('OLIMPIQ IS SUPER GAY')
+    }
+  }
+  class Fists {
+    constructor(obj) {
+      this.fist = obj;
+
+      if (this.fist.spriteImg == "") {
+        delete FISTS.fists["handSprites"];
+        console.log(FISTS.fists);
+        return;
+      }
+      FISTS.fists.handSprites = {};
+      FISTS.fists.handSprites.spriteL = FISTS.fists.handSprites.spriteR = this.fist.spriteImg;
+      console.log(FISTS.fists);
+    }
+  }
+  class Trees {
+    constructor(obj) {
+      this.name = obj.name;
+      this.sprite = obj.sprite;
+
+      let imgUrl = `https://surviv.io/img/map/${this.sprite.replace(
+        "img",
+        "svg"
+      )}`;
+      if (this.name.includes("tree")) {
+        obstacles.tree_01.img.sprite = imgUrl;
+      } else if (this.name.includes("crate")) {
+        obstacles.crate_01.img.sprite = imgUrl;
+      }
+      console.log(imgUrl);
     }
   }
   function applySkin(e) {
@@ -226,21 +279,7 @@ function load() {
   let accesoryEle = document.querySelector(".accesory");
   accesoryEle.addEventListener("click", applyFist);
   accesoryEle.innerHTML = "";
-  FistsRules = {};
-  class Fists {
-    constructor(obj) {
-      this.fist = obj;
 
-      if (this.fist.spriteImg == "") {
-        delete FISTS.fists["handSprites"];
-        console.log(FISTS.fists);
-        return;
-      }
-      FISTS.fists.handSprites = {};
-      FISTS.fists.handSprites.spriteL = FISTS.fists.handSprites.spriteR = this.fist.spriteImg;
-      console.log(FISTS.fists);
-    }
-  }
   __customFists.forEach((obj) => {
     let eee = `
                 <div class="skin-item" id="${obj.name.toCamelCase()}">
@@ -270,18 +309,6 @@ function load() {
     }
   }
 
-  // inject CSS
-  (() => {
-    const darkModeCss = `body.dark:root{--start-background:url('');--splash-background:;--dark-color:#1f1f1f;--light-dark-color:#676767}body.dark #start-row-header{background-image:var(--start-background)}body.dark #background{background-image:url('https://i.imgur.com/yxZVwZ6.png') !important}body.dark #start-overlay{background-color:rgba(0,0,0,.4)}body.dark #account-login,body.dark #btn-help,body.dark body.dark #server-select-main,body.dark #start-bottom-left,body.dark #start-bottom-middle,body.dark #start-top-left,body.dark .account-block-arrow::after,body.dark .account-loading-container,body.dark .language-select-wrap{display:none !important}body.dark .modal-customize-cat-connect{background:#676767}body.dark .modal-content-right{background:#363636}body.dark #ui-modal-keybind-body{background-color:#363636}body.dark .account-buttons > .menu-option:last-child{margin-bottom:0} body.dark .pass-toggle{background-image:url("http://surviv.io/img/gui/close.svg")}body.dark #start-menu{display:block;}body.dark .menu-option{background-color:#1f1f1f !important;box-shadow:inset 0 -4px black !important;border:none !important;border-radius:0}body.dark .player-name-input{box-shadow:unset !important;background-color:#ffffff40 !important}body.dark .player-name-input::placeholder{color:#292929}body.dark .name.menu-option{background:#ffffff40 !important;box-shadow:none !important}body.dark .team-menu-option{border-radius:0}body.dark #btn-customize{background-color:unset !important;box-shadow:unset !important}body.dark body.dark #start-row-header{margin-bottom:0}body.dark body.dark .account-details-block{width:unset;background:#ffffff40}body.dark body.dark .account-details{width:fit-content;padding:0}body.dark .account-buttons{padding:3px;background:#ffffff40} body.dark .btn-game-menu{background-color:#1f1f1f !important;box-shadow:inset 0 -4px black !important;border:none !important;border-radius:0;animation:none !important;background-image:none !important;text-indent:0 !important}body.dark .modal-footer,body.dark .modal-header{background-color:#1f1f1f !important}body.dark #modal-customize-body{background-color:#363636}body.dark .modal-customize-cat-selected{background:#3e3838!important} body.dark #modal-item-confirm .modal-body {background-color: #1d1d1d;} #modal-customize-item-sell-container {background-color: transparent;}`;
-    // UI css + dark theme
-    const UIcss = `.active { color: green; border: 2px solid #668e38;} .content, .pass-body-container  {display: none;}; .skin-name {margin: 10px;} .tab {display: flex !important;} .active-tab {display: block !important} .contents {display: flex; flex-direction: column; width: 100%; overflow-y: scroll; height: 100%;text-align: center; box-sizing: border-box;} .container {width: 100%; flex: 1 0 auto;} .skins, .accesory, .trees, .crates {display: flex; box-sizing: border-box; flex-wrap: wrap} .trees img {max-height: auto; max-width: 100%} .maps {display: flex; box-sizing: border-box; flex-wrap: wrap} .skin-item, .map-item {flex-grow: 1; flex-basis: 25%; position: relative; cursor: pointer; box-sizing: border-box; padding: 10px 0;} .tabs {display: flex !important;} .tab {display: inline-block !important; flex-grow: 1; padding: 10px; background: rgba(0, 0, 0, 0.28); cursor: pointer; border-right: 1px solid #ddd; border-bottom: 1px solid #ddd;} #start-menu {padding: 0;} #social-share-block-wrapper {display: none;} .tab.active-tab {background: #000;} .footer {background-color: #000; padding: 10px; border-top: 1px solid #ddd; flex-shrink: 0;} .footer p {margin:0; text-align: center;} .tab.icon { padding: 0; display: flex !important; justify-content: center; align-items: center;} .svg-icon { width: 1.5em; height: 1.5em; } .svg-icon path, .svg-icon polygon, .svg-icon rect { fill: #ffffff; } .svg-icon circle { stroke: #ffffff; stroke-width: 1;} .container.set .modal-settings-item {padding: 10px 0; } .btn-custom {-webkit-animation-name:custom-pulse;-webkit-animation-duration:5s;border-bottom:4px solid #00448a}@-webkit-keyframes custom-pulse{from{background-color:#8a9e69;border-bottom-color:#8a9e69;-webkit-box-shadow:0 0 9px #8a9e69}25%{background-color:#318585;border-bottom-color:#208686;-webkit-box-shadow:0 0 18px #318585}75%{background-color:#675fe0;border-bottom-color:#312b8a;-webkit-box-shadow:0 0 18px #675fe0}to{background-color:#8a9e69;border-bottom-color:#8a9e69;-webkit-box-shadow:0 0 9px #8a9e69}}#deleteSkinItem { position: absolute; right: 2px;} .btn-submit { margin-left: 10px; padding: 5px 10px; font-size: 1.3rem; background: #191616; color: #fff; border: solid 1px #fff; border-radius: 4px;} #addSkinName { font-size: 1.5rem;} .custom-wrapper-random { width: 753.89px; height: 415.06px; border-radius: 10.27px; box-sizing: border-box; max-height: unset; display: -webkit-box; display: flex;} ${darkModeCss}`;
-    function addStyleString(str) {
-      let node = document.createElement("style");
-      node.innerHTML = str;
-      document.body.appendChild(node);
-    }
-    addStyleString(UIcss);
-  })();
   // dark theme
   const settingsEle = document.querySelector(".container.set");
   if (localStorage.getItem("dark theme") === "true") {
@@ -445,97 +472,6 @@ function load() {
 
   // gun border colors
   // from https://greasyfork.org/en/scripts/398771-surviv-io-gun-color
-  let redGuns = [
-    "M1100",
-    "M870",
-    "MP220",
-    "Saiga-12",
-    "SPAS-12",
-    "Super 90",
-    "USAS-12",
-  ];
-  let yellowGuns = [
-    "CZ-3A1",
-    "G18C",
-    "M9",
-    "M93R",
-    "MAC-10",
-    "MP5",
-    "P30L",
-    "Dual P30L",
-    "UMP9",
-    "Vector",
-    "VSS",
-  ];
-  let blueGuns = [
-    "AK-47",
-    "AN-94",
-    "BAR M1918",
-    "BLR 81",
-    "DP-28",
-    "Groza",
-    "Groza-S",
-    "M1 Garand",
-    "M39 EMR",
-    "Mosin-Nagant",
-    "OT-38",
-    "OTs-38",
-    "PKP Pecheneg",
-    "SCAR-H",
-    "SV-98",
-    "SVD-63",
-  ];
-  let purpleGuns = [
-    "M1911",
-    "M1A1",
-    "Mk45G",
-    "Model 94",
-    "Peacemaker",
-    "Vector 45",
-  ];
-  let greenGuns = [
-    "FAMAS",
-    "L86A2",
-    "M249",
-    "M416",
-    "M4A1-S",
-    "Mk 12 SPR",
-    "QBB-97",
-    "Scout Elite",
-  ];
-  let melee = [
-    "Fists",
-    "Karambit Rugged",
-    "Karmabit Prismatic",
-    "Karmabit Drowned",
-    "Bayonet Woodland",
-    "Huntsman",
-    "Karambit",
-    "Bayonet",
-    "Bayonet Rugged",
-    "Bowie",
-    "Huntsman Rugged",
-    "Huntsman Burnished",
-    "Bowie Vintage",
-    "Bowie Frontier",
-    "Wood Axe",
-    "Blood Axe",
-    "Fire Axe",
-    "Katana",
-    "Katana Rusted",
-    "Katana Orchid",
-    "Naginata",
-    "Machete",
-    "Stone Hammer",
-    "Sledgehammer",
-    "Hook",
-    "Pan",
-    "Knuckles",
-    "Knuckles Rusted",
-    "Knuckles Heroic",
-    "Bonesaw",
-    "Spade",
-  ];
   let elems = document.getElementsByClassName("ui-weapon-name");
   Array.from(elems).forEach((elem) => {
     elem.addEventListener("DOMSubtreeModified", function () {
@@ -543,17 +479,17 @@ function load() {
       let weaponName = this.textContent;
       let borderColor;
       // using if with arrays to make the code shorter
-      if (melee.includes(weaponName)) {
+      if (__guns.melee.includes(weaponName)) {
         borderColor = "#000";
-      } else if (yellowGuns.includes(weaponName)) {
+      } else if (__guns.yellowGuns.includes(weaponName)) {
         borderColor = "#FFAE00";
-      } else if (blueGuns.includes(weaponName)) {
+      } else if (__guns.blueGuns.includes(weaponName)) {
         borderColor = "#0066FF";
-      } else if (greenGuns.includes(weaponName)) {
+      } else if (__guns.greenGuns.includes(weaponName)) {
         borderColor = "#039E00";
-      } else if (redGuns.includes(weaponName)) {
+      } else if (__guns.redGuns.includes(weaponName)) {
         borderColor = "#FF0000";
-      } else if (purpleGuns.includes(weaponName)) {
+      } else if (__guns.purpleGuns.includes(weaponName)) {
         border = "#7900FF";
       } else {
         switch (weaponName) {
@@ -613,29 +549,12 @@ function load() {
     if (e.keyCode == 112) e.preventDefault();
   });
 
-  let ObstaclesRules = {};
   let obstaclesEle = document.querySelector(".obstacles");
   let treesEle = document.querySelector(".trees");
   let cratesEle = document.querySelector(".crates");
 
-  class Trees {
-    constructor(obj) {
-      this.name = obj.name;
-      this.sprite = obj.sprite;
-
-      let imgUrl = `https://surviv.io/img/map/${this.sprite.replace(
-        "img",
-        "svg"
-      )}`;
-      if (this.name.includes("tree")) {
-        obstacles.tree_01.img.sprite = imgUrl;
-      } else if (this.name.includes("crate")) {
-        obstacles.crate_01.img.sprite = imgUrl;
-      }
-      console.log(imgUrl);
-    }
-  }
-
+  // too lazy to optimaze the code below
+  // uses new Trees for now
   __customTrees.forEach((obj) => {
     let eee = `
                 <div class="skin-item" id="${obj.name.toCamelCase()}">
@@ -651,7 +570,6 @@ function load() {
     };
     treesEle.innerHTML += eee;
   });
-
   __customCrates.forEach((obj) => {
     let eee = `
                 <div class="skin-item" id="${obj.name.toCamelCase()}">
