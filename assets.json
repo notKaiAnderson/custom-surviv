@@ -418,5 +418,98 @@
       "name": "crate_egg",
       "sprite": "map-crate-egg.img"
     }
-  ]
+  ],
+  "guns": {
+    "redGuns": [
+      "M1100",
+      "M870",
+      "MP220",
+      "Saiga-12",
+      "SPAS-12",
+      "Super 90",
+      "USAS-12"
+    ],
+    "yellowGuns": [
+      "CZ-3A1",
+      "G18C",
+      "M9",
+      "M93R",
+      "MAC-10",
+      "MP5",
+      "P30L",
+      "Dual P30L",
+      "UMP9",
+      "Vector",
+      "VSS"
+    ],
+    "blueGuns": [
+      "AK-47",
+      "AN-94",
+      "BAR M1918",
+      "BLR 81",
+      "DP-28",
+      "Groza",
+      "Groza-S",
+      "M1 Garand",
+      "M39 EMR",
+      "Mosin-Nagant",
+      "OT-38",
+      "OTs-38",
+      "PKP Pecheneg",
+      "SCAR-H",
+      "SV-98",
+      "SVD-63"
+    ],
+    "purpleGuns": [
+      "M1911",
+      "M1A1",
+      "Mk45G",
+      "Model 94",
+      "Peacemaker",
+      "Vector 45"
+    ],
+    "greenGuns": [
+      "FAMAS",
+      "L86A2",
+      "M249",
+      "M416",
+      "M4A1-S",
+      "Mk 12 SPR",
+      "QBB-97",
+      "Scout Elite"
+    ],
+    "melee": [
+      "Fists",
+      "Karambit Rugged",
+      "Karmabit Prismatic",
+      "Karmabit Drowned",
+      "Bayonet Woodland",
+      "Huntsman",
+      "Karambit",
+      "Bayonet",
+      "Bayonet Rugged",
+      "Bowie",
+      "Huntsman Rugged",
+      "Huntsman Burnished",
+      "Bowie Vintage",
+      "Bowie Frontier",
+      "Wood Axe",
+      "Blood Axe",
+      "Fire Axe",
+      "Katana",
+      "Katana Rusted",
+      "Katana Orchid",
+      "Naginata",
+      "Machete",
+      "Stone Hammer",
+      "Sledgehammer",
+      "Hook",
+      "Pan",
+      "Knuckles",
+      "Knuckles Rusted",
+      "Knuckles Heroic",
+      "Bonesaw",
+      "Spade"
+    ]
+  }
 }
